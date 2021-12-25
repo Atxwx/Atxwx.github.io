@@ -232,13 +232,13 @@
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot; </span><br></pre></td></tr></table></figure>
 
 <p>这里的邮箱是注册GitHub的邮箱，这里需要回车四次</p>
-<p><img src="/.com//%E5%AE%89%E8%A3%85SSH.png" alt="创建SSH"></p>
+<p><img src="/.com//12/25/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85SSH.png" alt="创建SSH"></p>
 <p>找到文件id_rsa.pub文件，在系统盘下user下，你自己的电脑名字，下有个刚下的文件.ssh,文件下由id_rsa.pub， 而后在GitHub的setting中，找到SSH keys的设置选项，点击<code>New SSH key</code>把你的<code>id_rsa.pub</code>里面的信息复制进去。 </p>
 <p>在输入下面命令，检查是否连接成功：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
 <p>成功截图：</p>
-<p><img src="/.com//%E6%B5%8B%E8%AF%95%E8%BF%9E%E6%8E%A5.png" alt="测试连接"></p>
+<p><img src="/.com//12/25/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E6%B5%8B%E8%AF%95%E8%BF%9E%E6%8E%A5.png" alt="测试连接"></p>
 <h2 id="6-创建本地Blog，执行hexo-初始化"><a href="#6-创建本地Blog，执行hexo-初始化" class="headerlink" title="6.创建本地Blog，执行hexo 初始化"></a>6.创建本地Blog，执行hexo 初始化</h2><p>在任意的盘下创建一个文件夹Blog，这个文件夹的作用就是hexo框架的位置。鼠标右键，执行Git Bash Here命令，输入以下命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
