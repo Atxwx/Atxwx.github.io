@@ -154,6 +154,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-操作系统软件工程Test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8BTest/">操作系统软件工程test</a>
+    </h1>
+  
+
+        
+        <a href="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8BTest/" class="archive-article-date">
+  	<time datetime="2021-12-29T15:01:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h5 id="1、分时系统的特征？"><a href="#1、分时系统的特征？" class="headerlink" title="1、分时系统的特征？"></a>1、分时系统的特征？</h5><p> 多路性、独立性、及时性、交互性</p>
+<h5 id="2、操作系统的基本特性"><a href="#2、操作系统的基本特性" class="headerlink" title="2、操作系统的基本特性?"></a>2、操作系统的基本特性?</h5><p> 并发、共享、虚拟、异步</p>
+<p><strong>并行</strong>是指两个或多个事件在同一时刻发生</p>
+<p><strong>并发</strong>是指两个或多个事件在同一时间间隔内发生，是指在一段时间内宏观上有多个程序在同时运行</p>
+<h5 id="3、进程的三种基本状态？"><a href="#3、进程的三种基本状态？" class="headerlink" title="3、进程的三种基本状态？"></a>3、进程的三种基本状态？</h5><p> 就绪状态：进程已获得除CPU外的所有必要资源，只等待CPU时的状态。一个系统会将多个处于就绪状态的进程排成一个就绪队列。</p>
+<p>执行状态：进程已获CPU，正在执行。单处理机系统中，处于执行状态的进程只一个；多处理机系统中，有多个处于执行状态的进程。</p>
+<p>阻塞状态：正在执行的进程由于某种原因而暂时无法继续执行，便放弃处理机而处于暂停状态，即进程执行受阻。（这种状态又称等待状态或封锁状态）</p>
+<h5 id="4、线程与进程的比较？"><a href="#4、线程与进程的比较？" class="headerlink" title="4、线程与进程的比较？"></a>4、线程与进程的比较？</h5><p>•   线程是调度分派的基本单位，访问资源；进程是资源拥有的基本单位</p>
+<p>•  不同进程之间的线程可并发执行，同一进程的线程也可并发执行；进程也可并发执行</p>
+<p>•  进程拥有资源，线程几乎不拥有资源，但是可以共享所在的进程下的所有资源</p>
+<p>•  同一个进程下地线程独立性要比进程之间的独立性要低地很多</p>
+<p>•  线程系统开销小；进程系统开销大</p>
+<p>•  线程上下文切换比进程上下文切换要快得多</p>
+<h5 id="5、死锁定义："><a href="#5、死锁定义：" class="headerlink" title="5、死锁定义："></a>5、死锁定义：</h5><p>一组进程中，每个进程都无限等待被该组进程中另一进程所占有的资源，因而永远无法得到资源，这种现象称为进程死锁，这一组进程就称为死锁进程。</p>
+<h5 id="6、产生死锁的必要条件："><a href="#6、产生死锁的必要条件：" class="headerlink" title="6、产生死锁的必要条件："></a>6、产生死锁的必要条件：</h5><p> （1）互斥条件：一个资源每次只能被一个进程使用。<br> （2） 请求和保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。<br> （3） 不可抢占条件:进程已获得的资源，在末使用完之前，不能强行剥夺。<br> （4） 循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。</p>
+<h5 id="7、解决死锁问题的四个基本方法？"><a href="#7、解决死锁问题的四个基本方法？" class="headerlink" title="7、解决死锁问题的四个基本方法？"></a>7、解决死锁问题的四个基本方法？</h5><p> 预防死锁、避免死锁、检测死锁、解除死锁</p>
+<h5 id="8、如何解决临界区问题？"><a href="#8、如何解决临界区问题？" class="headerlink" title="8、如何解决临界区问题？"></a>8、如何解决临界区问题？</h5><p> 空闲让进、忙则等待、有限等待、让权等待</p>
+<h5 id="9、什么是临界资源？"><a href="#9、什么是临界资源？" class="headerlink" title="9、什么是临界资源？"></a>9、什么是临界资源？</h5><p> 临界资源是一次仅允许一个进程使用的共享资源。</p>
+<h5 id="10、什么是临界区？"><a href="#10、什么是临界区？" class="headerlink" title="10、什么是临界区？"></a>10、什么是临界区？</h5><p>每个进程中访问临界资源的那段代码称为临界区，每次只允许一个进程进入临界区，进入后，不允许其他进程进入。</p>
+<h5 id="11、外碎片：内存中不连续小块的内存"><a href="#11、外碎片：内存中不连续小块的内存" class="headerlink" title="11、外碎片：内存中不连续小块的内存"></a>11、外碎片：内存中不连续小块的内存</h5><h5 id="内碎片：进程的最后一页经常装不满一块，进而形成了不可利用的碎片"><a href="#内碎片：进程的最后一页经常装不满一块，进而形成了不可利用的碎片" class="headerlink" title="内碎片：进程的最后一页经常装不满一块，进而形成了不可利用的碎片"></a>内碎片：进程的最后一页经常装不满一块，进而形成了不可利用的碎片</h5><h5 id="12、分页与分段的区别？"><a href="#12、分页与分段的区别？" class="headerlink" title="12、分页与分段的区别？"></a>12、分页与分段的区别？</h5><p>（１）页是信息的物理单位，段是信息的逻辑单位</p>
+<p>（２）页的大小固定且由系统决定，段的长度不固定，其取决于用户所编写的程序</p>
+<p>（３）分页的用户程序地址空间是一维的，分段的用户程序地址空间是二维的</p>
+<h5 id="13、I-O设备的控制方式有哪些？"><a href="#13、I-O设备的控制方式有哪些？" class="headerlink" title="13、I/O设备的控制方式有哪些？"></a>13、I/O设备的控制方式有哪些？</h5><p>（1）使用轮询的可编程I/O方式</p>
+<p>（2）使用中断的可编程I/O方式</p>
+<p>（3）直接存储器访问（DMA）方式</p>
+<p>（4）I/O通道方式</p>
+<h5 id="14、缓冲的引入原因？"><a href="#14、缓冲的引入原因？" class="headerlink" title="14、缓冲的引入原因？"></a>14、缓冲的引入原因？</h5><p>  （1）缓和CPU与I/O设备间速度不匹配的矛盾</p>
+<p>  （2）减少对CPU中断的频率，放宽对CPU中断响应时间的限制</p>
+<p>  （3）解决数据粒度不匹配的问题</p>
+<p>  （4）提高CPU和I/O设备之间的并行性</p>
+<h1 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h1><h5 id="1-软件定义"><a href="#1-软件定义" class="headerlink" title="1.软件定义"></a>1.软件定义</h5><p>答：是和计算机硬件一起构成了计算机系统，是其一部分，能够实现预定功能和性能的计算机程序，并支持程序运行的数据及其相关文档的集合。</p>
+<h5 id="2．软件工程三要素"><a href="#2．软件工程三要素" class="headerlink" title="2．软件工程三要素"></a>2．软件工程三要素</h5><p>答：工具，方法，过程。</p>
+<h5 id="3．控制复杂性"><a href="#3．控制复杂性" class="headerlink" title="3．控制复杂性"></a>3．控制复杂性</h5><p>答：软件工程的中心课题是控制复杂性。</p>
+<h5 id="4-软件工程的基本原理"><a href="#4-软件工程的基本原理" class="headerlink" title="4.软件工程的基本原理"></a>4.软件工程的基本原理</h5><p>答：用分阶段的生命周期计划严格管理，坚持进行阶段评审，实行严格的产品控制，采用现代程序设计技术，结果应能清楚地审查，开发小组的成员应该少而精，承认不断改进软件工程实践的必要性。</p>
+<h5 id="5-软件生命周期"><a href="#5-软件生命周期" class="headerlink" title="5.软件生命周期"></a>5.软件生命周期</h5><p>答：软件定义周期（问题定义、可行性研究、需求分析），软件开发周期（概要设计、详细设计、编码和单元测试、综合测试），软件维护时期。</p>
+<h5 id="6-敏捷过程"><a href="#6-敏捷过程" class="headerlink" title="6.敏捷过程"></a>6.敏捷过程</h5><p>答：为了使软件开发团队具有高效工作和快速响应变化的能力。</p>
+<h5 id="7-极限编程开发方法要点"><a href="#7-极限编程开发方法要点" class="headerlink" title="7.极限编程开发方法要点"></a>7.极限编程开发方法要点</h5><p>答：极限编程是一个轻量级的、灵巧的软件开发方法。它的基础和价值观是交流、朴素、反馈和勇气。它是一种近螺旋式的开发方法，它将复杂的开发过程分解为一个个相对比较简单的小周期；通过积极的交流、反馈以及其他一系列的方法，开发人员和客户可以非常清楚开发进度、变化，待解决的问题和潜在的困难等，并根据实际情况及时的调整开发过程。 </p>
+<h5 id="8-成本估算方法有哪些"><a href="#8-成本估算方法有哪些" class="headerlink" title="8.成本估算方法有哪些"></a>8.成本估算方法有哪些</h5><p>答：（1）代码行技术：它把开发软件功能的成本和实现功能所需的代码行数联系起来。（2）任务分解法：首先，先将项目分解成若干个相对独立的任务，再估计每个单独开发任务的成本，合算总成本。（3）自动估计算法：采用相应的软件工具进行估算。</p>
+<h5 id="9-面向对象中类间基本关系"><a href="#9-面向对象中类间基本关系" class="headerlink" title="9.面向对象中类间基本关系"></a>9.面向对象中类间基本关系</h5><ul>
+<li> 继承：实现代码的复用，子类继承父类。  </li>
+<li> 关联：两个类一般是平等的，不是从属关系。  </li>
+<li> 依赖：一个类的某种行为依赖于另一个类。  </li>
+<li> 组合:将一个类的部分放到另一个类中。</li>
+<li> 聚合：和组合相比是一种弱所属关系，被聚合对象可以属于多个聚合对象。  </li>
+</ul>
+<h5 id="10-面向对象设计的基本方法"><a href="#10-面向对象设计的基本方法" class="headerlink" title="10.面向对象设计的基本方法"></a>10.面向对象设计的基本方法</h5><p>答：（1）系统设计概述。（2）问题域设计。（3）用户界面设计（设计输入与输出、命令的组织、设计人机交互类）。（4）任务管理设计（确定事件驱动型任务、确定时钟驱动型任务、确定优先任务、确定关键任务、确定协调任务、尽量减少任务数、确定资源需求）。（5）持久化设计。（6）对象设计（开闭原则、服务设计、关联设计、设计优化）。</p>
+<h5 id="11-架构的概念"><a href="#11-架构的概念" class="headerlink" title="11.架构的概念"></a>11.架构的概念</h5><p>答：架构是一个或多个结构的抽象，是由抽象的构件来表示的，构建之间相互具有联系，相互之间的联系具有某些行为特征。</p>
+<h5 id="12-什么模块化？什么是模块独立性？为什么要保持模块独立性？如何度量模块的独立性？"><a href="#12-什么模块化？什么是模块独立性？为什么要保持模块独立性？如何度量模块的独立性？" class="headerlink" title="12.什么模块化？什么是模块独立性？为什么要保持模块独立性？如何度量模块的独立性？"></a>12.什么模块化？什么是模块独立性？为什么要保持模块独立性？如何度量模块的独立性？</h5><p>答：模块化就是把程序划分成独立命名且可独立访问的模块，每个模块完成一个子功能，若干个模块构成一个整体，共同完成用户需求。模块独立性是指每个模块只完成系统要求的独立子功能，并且与其他模块的联系最少且接口简单。保持模块独立性是因为有效模块化的软件比较容易开发出来，独立的模块也比较容易测试和维护。模块的独立性可以使用耦合和内聚两个指标来定性地度量。</p>
+<h5 id="13-装饰器模式"><a href="#13-装饰器模式" class="headerlink" title="13.装饰器模式"></a>13.装饰器模式</h5><p>答：<strong>适配器(Adapter)模式</strong>将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。Adapter模式的宗旨是保留现有类所提供的服务,向客户提供接口,以满足客户的期望。</p>
+<p><strong>装饰器模式:</strong> 指在<strong>不改变现有对象结构的情况</strong>下，<strong>动态</strong>地给该对象<strong>增加</strong>一些职责（即增加其额外功能）的模式，它属于<strong>对象结构型</strong>模式 </p>
+<h5 id="14-软件重用"><a href="#14-软件重用" class="headerlink" title="14.软件重用"></a>14.软件重用</h5><p>答：是利用事先建立好的软构件创建新软件系统的过程。 </p>
+<h5 id="15-重构"><a href="#15-重构" class="headerlink" title="15.重构"></a>15.重构</h5><p>答：是指通过调整程序代码改善软件的质量、性能，使程序的设计模式和架构更加合理，提高软件的扩展性和维护性。</p>
+<h5 id="16-框架"><a href="#16-框架" class="headerlink" title="16.框架"></a>16.框架</h5><p>答：框架是一个可复用的软件架构解决方案，规定了应用的体系结构，阐明了软件体系结构中各层次间及其层次内部各组件间的依赖关系、责任分配和控制流程，表现为一组接口、抽象类以及其实例之间协作的方法。</p>
+<h5 id="17-软件测试"><a href="#17-软件测试" class="headerlink" title="17.软件测试"></a>17.软件测试</h5><p>答：是一个持续的过程；包含动态测试和静态测试；分为人工测试和自动化测试；主要工作是制定测试计划、设计测试用例、执行测试用例和分析测试用例结果；最终目标是位了保证软件的质量。</p>
+<h5 id="18-软件维护的概念"><a href="#18-软件维护的概念" class="headerlink" title="18.软件维护的概念"></a>18.软件维护的概念</h5><p>答：是指在软件交付运行之后。为保证软件正常运行或适应新变化而进行一系列修改活动；主要内容：源程序维护；数据维护；代码维护；环境维护。</p>
+<h5 id="19-如何提高软件的可维护性？"><a href="#19-如何提高软件的可维护性？" class="headerlink" title="19.如何提高软件的可维护性？"></a>19.如何提高软件的可维护性？</h5><p>答：确立明确的软件质量目标与优先级；利用先进的软件技术和工具；进行明确的质量保证审查；选择可维护的程序设计语言；改进程序的文档。</p>
+<h5 id="20-决定软件可维护性的因素主要包括哪些？"><a href="#20-决定软件可维护性的因素主要包括哪些？" class="headerlink" title="20.决定软件可维护性的因素主要包括哪些？"></a>20.决定软件可维护性的因素主要包括哪些？</h5><p>答：可理解性、可使用性、可修改性、可测试性、可移植性、可重用性、效率、可靠性。</p>
+<h5 id="21-谈谈你对软件评审的理解"><a href="#21-谈谈你对软件评审的理解" class="headerlink" title="21.谈谈你对软件评审的理解"></a>21.谈谈你对软件评审的理解</h5><p>答：软件评审是以提高软件质量为目的的技术活动。它是在软件开发过程中，由评审人员对软件开发文档或代码进行评审或检查，帮助查找缺陷和改进。评审的内容包括管理评审、技术评审、文档评审和过程评审等。</p>
+<h5 id="22-谈谈你对配置管理的理解"><a href="#22-谈谈你对配置管理的理解" class="headerlink" title="22.谈谈你对配置管理的理解"></a>22.谈谈你对配置管理的理解</h5><p>答：协调软件开发以减少不理解性到最低程度的技术称为配置管理；配置管理是对正在被一个项目组建造的软件的修改标识、组织和控制的技术，其目标是通过最大限度减少错误来提高生产率。</p>
+<h5 id="23-项目管理的关注的主要问题"><a href="#23-项目管理的关注的主要问题" class="headerlink" title="23.项目管理的关注的主要问题"></a>23.项目管理的关注的主要问题</h5><p>答：范围：即项目涉及的工作范围，为实现项目目标所完成的所有工作；时间：也称项目进度，在项目实施前，需要编制项目计划进度；成本：完成项目的所用的成本；质量：是指软件与明确地和隐含地定义地需求相一致地程度。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8BTest/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="post-信息安全Test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -912,10 +1047,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">start</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -924,15 +1055,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">start</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">test</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
