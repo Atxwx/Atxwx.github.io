@@ -640,9 +640,9 @@
 <h1 id="Java模块"><a href="#Java模块" class="headerlink" title="Java模块"></a>Java模块</h1><h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><p><strong>1.JDK和JRE有什么区别</strong><br>   <strong>答：</strong>简单的说，JDK是Java运行的工具包，JRE是Java运行的环境，JDK包含JRE。<br><strong>2.== 和 equals 的区别是什么？</strong><br>   <strong>答：</strong>==是判断两个变量的指向空间是否相等，equals判断两个变量指向的空间中的内容是否相等。<br><strong>3.两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？</strong><br>   <strong>答：</strong>错，首先 equals和hashCode方法都是用来判断两个对象的值是否相等 。区别：判断的方式不一样，判断的准确率不一样。hachCode()方法是通过用hash算法来计算具体对象实例，得到返回一个hashcode值，比较返回的值是否相等。这句话反过来说是对的。<br><strong>4.final 在 Java 中有什么作用？</strong><br>   <strong>答：</strong>修饰类：是最终类，不能被继承。修饰方法：不能被子类覆盖或者重写。修饰变量：只能一次赋值以后不能被修改。<br><strong>5.Java 中的 Math.round(-1.5) 等于多少</strong><br>   <strong>答：</strong>首先Math.round()方法是四舍五入，如果是正数正常舍弃或者进值，负数就向前进值。也就是-1。</p>
 <p><strong>6.String 属于基础的数据类型吗？</strong><br>   <strong>答：</strong>不是。Java中的数据类型有两种：基本数据类型和引用数据类型。基本数据类型：byte，int，short，long，double，float，blooen。引用数据类型：类，接口，数组。<br><strong>7.java 中操作字符串都有哪些类？它们之间有什么区别？</strong><br>   <strong>答：</strong>有String、StringBuffer、StringBuilder</p>
 <ul>
-<li>String：final修饰，String类的方法返回都是new String，即对String对象的任何改变都不影响到原对象，对字符串的修改都会产生新的对象。</li>
-<li>StringBuffer：对字符串的修改都加了synchronized，保证了线程安全</li>
-<li>StringBuilder：线程不安全，在方法体内需要进行字符串的修改操作，可以new StringBuilder对象，调用StringBuilder对象的append、replace、delete等方法修改字符串。</li>
+<li>String：是不可变长字的字符序列，一旦存在，不能修改，final修饰，如果出现了字符串的拼接，就会在常量池中另外开辟新的内存存放，会造成空间的浪费。所以出现了可变的字符序列，StringBuffer和StringBuilder。</li>
+<li>StringBuffer：中的方法都加了synchronized修饰，保证了线程安全。所有的公开方法都是同步的，因此性能相对来说是较慢的。</li>
+<li>StringBuilder：线程不安全，但是性能相对来说快一点。</li>
 </ul>
 <p><strong>8.String str=”i”与 String str=new String(“i”)一样吗？</strong><br>   答：不一样，使用String str=“i”，java虚拟机会把它分配到常量池中，而 String str=new String(“i”)创建了一个对象，会被分到堆内存中 。只要是new出来的都会分配到堆内存中。</p>
 <p><strong>9.如何将字符串反转？</strong><br><strong>答：</strong>使用StringBuilder的reverse()方法，最简单。</p>
@@ -725,6 +725,20 @@
 <p><strong>答：</strong> 当多个线程都开启事务操作数据库中的数据时，<strong>数据库系统要能进行隔离操作</strong>，以保证各个线程获取数据的准确性 。若不考虑则会出现，脏读，不可重复度，幻读。</p>
 <p><strong>7. 说一下乐观锁和悲观锁？</strong> </p>
 <p><strong>答：</strong>就是对数据库进行操作时使用的，乐观锁是update是开始，悲观锁是查询记录那一刻开始，两者结束都是commit或者 rollback 。</p>
+<p><strong>8.数据库中常用的函数</strong></p>
+<p><strong>答：</strong>isnull函数，decode函数，SubString函数，round函数</p>
+<ul>
+<li><p>isnull函数：参数是一个，判断是否为空，是则返回1，否则返回0。两个参数isnull(exper1,exper2)，判断exper1是否为空，是则用exper2代替，否则exper1。</p>
+</li>
+<li><p>decode函数：相当于if，可以比较多个；<strong>SELECT ID,DECODE(inParam,’beComparedParam’,’值1’ ,’值2’) name FROM bank</strong></p>
+<p>#如果第一个参数inParam==’beComparedParam’，则select得到的name显示为值1</p>
+<p>#如果第一个参数inParam!=’beComparedParam’，则select得到的name显示为值2</p>
+</li>
+<li><p>substring函数： SUBSTRING（str，x，y），str，代表字符串；x，代表是从第几位开始截取；y，代表截取几位数。 </p>
+</li>
+<li><p>round函数：ROUND ( numeric_expression , length  )  ，四舍五入，length为四舍五入的精度，当为正数时，在小数点后进行，为负数时，在小数点的前面进行。</p>
+</li>
+</ul>
 
       
 
@@ -962,6 +976,7 @@
 
 <p> 其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章将本地的文件部署到github仓库上，可以用<code>hexo d</code>缩写 </p>
 <p>需要验证密码，在更新后需要令牌</p>
+<p>选择下面密码登录，然后弹出的框子叉了就可以，在输入用户名，然后输入令牌，令牌在github上开发者设置里。</p>
 <h1 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h1><h2 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1. 更换主题"></a>1. 更换主题</h2><p>主题的选择可以从hexo的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">官网上下载</a>，安装的步骤是将主题克隆到 到 themes 目录下 ，例如：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:MOxFIVE/hexo-theme-yelee.git themes/yelee</span><br></pre></td></tr></table></figure>
 
